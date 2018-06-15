@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.modular.system.dao.WbzxDizhiMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.stylefeng.guns.modular.system.model.WbzxDizhi">
+        <id column="id" property="id" />
+        <result column="dizhi_name" property="dizhiName" />
+        <result column="dizhi_guige" property="dizhiGuige" />
+        <result column="dizhi_danwei" property="dizhiDanwei" />
+        <result column="dizhi_shuliang" property="dizhiShuliang" />
+        <result column="dizhi_leibie" property="dizhiLeibie" />
+        <result column="dizhi_zhuangtai" property="dizhiZhuangtai" />
+        <result column="dizhi_bumen" property="dizhiBumen" />
+        <result column="dizhi_user" property="dizhiUser" />
+        <result column="dizhi_weizhi" property="dizhiWeizhi" />
+        <result column="dizhi_time" property="dizhiTime" />
+        <result column="dizhi_beizhu" property="dizhiBeizhu" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, dizhi_name AS dizhiName, dizhi_guige AS dizhiGuige, dizhi_danwei AS dizhiDanwei, dizhi_shuliang AS dizhiShuliang, dizhi_leibie AS dizhiLeibie, dizhi_zhuangtai AS dizhiZhuangtai, dizhi_bumen AS dizhiBumen, dizhi_user AS dizhiUser, dizhi_weizhi AS dizhiWeizhi, dizhi_time AS dizhiTime, dizhi_beizhu AS dizhiBeizhu
+    </sql>
+
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.modular.system.dao.WbzxChenbaojianMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.stylefeng.guns.modular.system.model.WbzxChenbaojian">
+        <id column="id" property="id" />
+        <result column="chenbaojian_no" property="chenbaojianNo" />
+        <result column="chenbaojiancol_name" property="chenbaojiancolName" />
+        <result column="chenbaojiancol_time" property="chenbaojiancolTime" />
+        <result column="chenbaojiancol_user" property="chenbaojiancolUser" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, chenbaojian_no AS chenbaojianNo, chenbaojiancol_name AS chenbaojiancolName, chenbaojiancol_time AS chenbaojiancolTime, chenbaojiancol_user AS chenbaojiancolUser
+    </sql>
+
+</mapper>

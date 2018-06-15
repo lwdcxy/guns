@@ -1,0 +1,40 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <input type="hidden" id="id" value="">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <!-- <#input id="id" name="序号" underline="true"/> -->
+                            <#input id="dizhiName" name="物品名称" underline="true"/>
+                            <#input id="dizhiGuige" name="规格" underline="true"/>
+                            <#input id="dizhiDanwei" name="单位" underline="true"/>
+                            <#input id="dizhiShuliang" name="数量" underline="true"/>
+                            <#input id="dizhiLeibie" name="类别"/>
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="dizhiZhuangtai" name="状态" underline="true"/>
+                            <#input id="dizhiBumen" name="使用部门" underline="true"/>
+                            <#input id="dizhiUser" name="使用人" underline="true"/>
+                            <#input id="dizhiWeizhi" name="存放位置" underline="true"/>
+                            <#input id="dizhiTime" name="购入日期" underline="true" type="date"
+								clickFun="laydate({istime: false, format: 'YYYY-MM-DD'})"/>
+                            <#input id="dizhiBeizhu" name="备注" underline="true"/>
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="WbzxDizhiInfoDlg.addSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="WbzxDizhiInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/dizhiyihao/wbzxDizhi/wbzxDizhi_info.js"></script>
+@}

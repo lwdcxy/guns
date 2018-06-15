@@ -1,0 +1,38 @@
+@layout("/common/_container.html"){
+<div class="row">
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>呈报件登记管理</h5>
+            </div>
+            <div class="ibox-content">
+                <div class="row row-lg">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <#NameCon id="condition" name="呈报件名称" />
+                            </div>
+                            <div class="col-sm-3">
+                                <#button name="搜索" icon="fa-search" clickFun="WbzxChenbaojian.search()"/>
+                            </div>
+                        </div>
+                        <div class="hidden-xs" id="WbzxChenbaojianTableToolbar" role="group">
+                            @if(shiro.hasPermission("/wbzxChenbaojian/add")){
+                                <#button name="添加" icon="fa-plus" clickFun="WbzxChenbaojian.openAddWbzxChenbaojian()"/>
+                            @}
+                            @if(shiro.hasPermission("/wbzxChenbaojian/update")){
+                                <#button name="修改" icon="fa-edit" clickFun="WbzxChenbaojian.openWbzxChenbaojianDetail()" space="true"/>
+                            @}
+                            @if(shiro.hasPermission("/wbzxChenbaojian/delete")){
+                                <#button name="删除" icon="fa-remove" clickFun="WbzxChenbaojian.delete()" space="true"/>
+                            @}
+                        </div>
+                        <#table id="WbzxChenbaojianTable"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/chenbaojan/wbzxChenbaojian/wbzxChenbaojian.js"></script>
+@}

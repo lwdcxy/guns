@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.modular.system.dao.WbzxOilcanMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.stylefeng.guns.modular.system.model.WbzxOilcan">
+        <id column="id" property="id" />
+        <result column="oilcan_name" property="oilcanName" />
+        <result column="oilcan_parameter" property="oilcanParameter" />
+        <result column="oilcan_record" property="oilcanRecord" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, oilcan_name AS oilcanName, oilcan_parameter AS oilcanParameter, oilcan_record AS oilcanRecord
+    </sql>
+
+</mapper>
